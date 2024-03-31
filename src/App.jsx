@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter , Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
 import History from './pages/History';
@@ -12,9 +12,9 @@ import Community from './pages/Community';
 
 function AppWrapper() {
   return (
-    <Router>
+    <HashRouter >
       <App />
-    </Router>
+    </HashRouter >
   );
 }
 
