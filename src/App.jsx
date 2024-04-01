@@ -1,4 +1,5 @@
 import React from 'react';
+import { CssBaseline, Container, Box, Typography, styled, useTheme  } from '@mui/material';
 import { HashRouter , Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -7,7 +8,9 @@ import Members from './pages/Members';
 import NavBar from './components/NavBar';
 import Prospects from './pages/Prospects';
 import Community from './pages/Community';
+import Footer from './components/Footer';
 
+const Offset = styled('div')(({ theme }) => theme.mixins.toolbar);
 
 
 function AppWrapper() {
@@ -19,16 +22,22 @@ function AppWrapper() {
 }
 
 function App() {
+  const theme = useTheme();
 
   return (
-      <><NavBar /><Routes>
+      <><><CssBaseline /><NavBar />
+       <Offset />
+      <Box sx={{ flexGrow: 1, padding: theme.spacing(3) }}>
+      <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="/history" element={<History />} />
       <Route path="/prospects" element={<Prospects />} />
       <Route path="/community" element={<Community />} />
       <Route path="/members" element={<Members />} />
-    </Routes></>
+    </Routes>
+    </Box>
+    </><Footer /></>
   );
 }
 
