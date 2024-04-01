@@ -19,7 +19,7 @@ const HeroSection = styled(Box)(({ theme }) => ({
   flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'center',
-  backgroundImage: "url(src/assets/Resized_Resized_Douglas_Lodge_No._153_AF&AM_BLUE.jpeg)",
+  backgroundImage: "url(public/Resized_Resized_Douglas_Lodge_No._153_AF&AM_BLUE.jpeg)",
   backgroundPosition: "center",
   backgroundSize: "cover",
   backgroundRepeat: "no-repeat",
