@@ -10,7 +10,12 @@ export default defineConfig({
       '@emotion/styled', 
       '@mui/material/Tooltip',
       '@mui/material/useTheme',
-      '@mui/material/styled',
+      '@mui/material/styles',
+      '@mui/material/Box',
+      '@mui/material/Typography',
+      '@mui/material/Grid',
+      '@mui/material/ImageList',
+      '@mui/material/ImageListItem',
     ],
   },
   plugins: [
