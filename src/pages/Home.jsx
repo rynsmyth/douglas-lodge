@@ -14,7 +14,7 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 const HeroSection = styled(Box)(({ theme }) => ({
-  height: '90vh', // or any other value you prefer
+  height: '100vh', // or any other value you prefer
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'center',
@@ -34,13 +34,10 @@ const Home = () => {
     <Box sx={{ flexGrow: 1, overflowX: 'hidden' }}> {/* Prevents horizontal scrolling */}
       {/* Hero Section */}
       <HeroSection>
-        <Typography variant="h2" gutterBottom>
-          Welcome to Douglas Lodge #153 Homepage
-        </Typography>
-        <Typography variant="h5">
+      </HeroSection>
+      <Typography variant="h3" style={{ textAlign: 'center' }}>
           Discover the history and values of Freemasonry.
         </Typography>
-      </HeroSection>
 
       {/* Grid for additional content */}
       <Grid container spacing={2} sx={{ width: '100vw', margin: '0', '& > .MuiGrid2-root': { paddingLeft: '0', paddingRight: '0' } }}>

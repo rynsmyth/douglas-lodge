@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AppBar, Toolbar, Typography, Button, IconButton, Drawer, List, ListItem, ListItemText } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
+import Logo from '/douglasLogo.jpg.jpg'; // import your logo
 
 const NavBar = () => {
   const [isDrawerOpen, setDrawerOpen] = useState(false);
@@ -18,7 +19,7 @@ const NavBar = () => {
   const list = () => (
     <div role="presentation" onClick={toggleDrawer(false)} onKeyDown={toggleDrawer(false)} style={{width: '100%'}}>
       <List>
-        {['Home', 'About', 'History', 'Members', 'Prospects', 'Community'].map((text) => (
+        {['Home', 'About', 'History', 'Members', 'Prospects', 'Community', 'Cornerstone'].map((text) => (
           <ListItem button key={text} component={Link} to={'/' + (text.toLowerCase() === 'home' ? '' : text.toLowerCase())}>
             <ListItemText primary={text} />
           </ListItem>
@@ -36,6 +37,7 @@ const NavBar = () => {
         <Drawer anchor="left" open={isDrawerOpen} onClose={toggleDrawer(false)}>
           {list()}
         </Drawer>
+        <img src={Logo} alt="Logo" style={{ marginRight: '10px', height: '40px', width: 'auto' }} /> {/* Add your logo here */}
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
           Douglas Lodge #153
         </Typography>

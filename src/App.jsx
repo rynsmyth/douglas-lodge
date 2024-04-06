@@ -9,6 +9,7 @@ import NavBar from './components/NavBar';
 import Prospects from './pages/Prospects';
 import Community from './pages/Community';
 import Footer from './components/Footer';
+import Cornerstone from './pages/Cornerstone';
 
 const Offset = styled('div')(({ theme }) => theme.mixins.toolbar);
 
@@ -35,6 +36,7 @@ function App() {
       <Route path="/prospects" element={<Prospects />} />
       <Route path="/community" element={<Community />} />
       <Route path="/members" element={<Members />} />
+      <Route path="/cornerstone" element={<Cornerstone />} />
     </Routes>
     </Box>
     </><Footer /></>
