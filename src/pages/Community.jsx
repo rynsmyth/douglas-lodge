@@ -4,6 +4,8 @@ import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Unstable_Grid2"; // Make sure you're ready for any potential breaking changes in future updates
 import { Typography } from "@mui/material";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // Requires CSS file
+import { Carousel } from 'react-responsive-carousel';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -20,20 +22,36 @@ const Community = () => {
           <Typography variant="h3" style={{ textAlign: 'center' }}>
               Our Amazing Community.
             </Typography>
+
+      <Carousel showThumbs={false} showStatus={false} infiniteLoop autoPlay interval={3000}>
+        <div>
+          <img src="./douglasSiteImages/castleRockFirelogo.png" alt="Lodge Image 1" />
+          <p className="legend">Lodge Image 1</p>
+        </div>
+        <div>
+          <img src="./douglasSiteImages/DSCLibraryCornerstone.jpg" alt="Lodge Image 2" />
+          <p className="legend">Lodge Image 2</p>
+        </div>
+        <div>
+          <img src="./douglasSiteImages/jobsDaughtersColorado.png" alt="Lodge Image 3" />
+          <p className="legend">Lodge Image 3</p>
+        </div>
+        {/* Add more images as needed */}
+      </Carousel>
     
           {/* Grid for additional content */}
           <Grid container spacing={2} sx={{ width: '100vw', margin: '0', '& > .MuiGrid2-root': { paddingLeft: '0', paddingRight: '0' } }}>
             <Grid xs={6} md={8} item>
-              <Item>xs=6 md=8</Item>
+            <Item>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.</Item>
             </Grid>
             <Grid xs={6} md={4} item>
-              <Item>xs=6 md=4</Item>
+            <Item>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.</Item>
             </Grid>
             <Grid xs={6} md={4} item>
-              <Item>xs=6 md=4</Item>
+            <Item>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.</Item>
             </Grid>
             <Grid xs={6} md={8} item>
-              <Item>xs=6 md=8</Item>
+            <Item>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.</Item>
             </Grid>
           </Grid>
         </Box>

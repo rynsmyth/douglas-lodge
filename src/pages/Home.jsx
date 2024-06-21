@@ -1,4 +1,3 @@
-// Removed import React since it's not necessary for JSX anymore
 import { Box, Paper, Grid, Typography, useTheme } from '@mui/material';
 import EventsCalendar from '../components/Calendar';
 
@@ -7,10 +6,10 @@ const Item = ({ children }) => {
   return (
     <Paper
       sx={{
-        backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
+        backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
         ...theme.typography.body2,
         padding: theme.spacing(1),
-        textAlign: "center",
+        textAlign: 'center',
         color: theme.palette.text.secondary,
       }}
     >
@@ -41,7 +40,6 @@ const events = [
 ];
 
 const HeroSection = () => {
-  const theme = useTheme();
   return (
     <Box
       sx={{
@@ -50,10 +48,10 @@ const HeroSection = () => {
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundImage: "url(/douglas-lodge/Resized_Resized_Douglas_Lodge_No._153_AF&AM_BLUE.jpeg)",
-        backgroundPosition: "center",
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
+        backgroundImage: 'url(/douglas-lodge/Resized_Resized_Douglas_Lodge_No._153_AF&AM_BLUE.jpeg)',
+        backgroundPosition: 'center',
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
         color: 'white',
         width: '100vw',
         margin: '0 auto',
@@ -67,26 +65,27 @@ const Home = () => {
   return (
     <Box sx={{ flexGrow: 1, overflowX: 'hidden' }}>
       <HeroSection />
-      <Typography variant="h3" sx={{ textAlign: 'center' }}>
+      <Typography variant="h3" sx={{ textAlign: 'center', mt: 4 }}>
         Discover the history and values of Freemasonry.
       </Typography>
       <Grid container spacing={2} sx={{ width: '100vw', margin: '0', '& > .MuiGrid-root': { paddingLeft: '0', paddingRight: '0' } }}>
-        <Grid item xs={6} md={8}>
+        <Grid item xs={12} md={8}>
           <Item>
-          <Typography variant="h3" sx={{ textAlign: 'center' }}>
-        Upcoming
-      </Typography>
-          <EventsCalendar events={events} />
+            <Typography variant="h4" sx={{ textAlign: 'center', mb: 2 }}>
+              Upcoming Events
+            </Typography>
+            <EventsCalendar events={events} />
           </Item>
         </Grid>
-        <Grid item xs={6} md={4}>
-          <Item>xs=6 md=4</Item>
+        <Grid item xs={12} md={4}>
+          <Item>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.</Item>
+          <Item>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.</Item>
         </Grid>
-        <Grid item xs={6} md={4}>
-          <Item>xs=6 md=4</Item>
+        <Grid item xs={12} md={6}>
+          <Item>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.</Item>
         </Grid>
-        <Grid item xs={6} md={8}>
-          <Item>xs=6 md=8</Item>
+        <Grid item xs={12} md={6}>
+          <Item>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.</Item>
         </Grid>
       </Grid>
     </Box>

@@ -7,13 +7,13 @@ const localizer = momentLocalizer(moment);
 
 const EventsCalendar = ({ events }) => {
   return (
-    <div style={{ height: 700 }}>
+    <div style={{ height: 350 }}>
      <Calendar
   localizer={localizer}
   events={events}
   startAccessor="start"
   endAccessor="end"
-  style={{ height: 500 }}
+  style={{ height: 350 }}
   views={['month', 'week', 'day', 'agenda']}
   defaultView="week"
 />
