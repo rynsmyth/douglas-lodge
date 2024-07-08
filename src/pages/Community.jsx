@@ -20,23 +20,19 @@ const Community = () => {
           <Box sx={{ flexGrow: 1, overflowX: 'hidden' }}> {/* Prevents horizontal scrolling */}
           {/* Hero Section */}
           <Typography variant="h3" style={{ textAlign: 'center' }}>
-              Our Amazing Community.
+              Community Square
             </Typography>
 
       <Carousel showThumbs={false} showStatus={false} infiniteLoop autoPlay interval={3000}>
         <div>
-          <img src="./douglasSiteImages/castleRockFirelogo.png" alt="Lodge Image 1" />
-          <p className="legend">Lodge Image 1</p>
+          <img src="./douglasSiteImages/castleRockFirelogo.png" alt="Lodge Image 1"  style={{ width: '300px', height: '300px', objectFit: 'cover', margin: '0 auto' }} />
         </div>
         <div>
-          <img src="./douglasSiteImages/DSCLibraryCornerstone.jpg" alt="Lodge Image 2" />
-          <p className="legend">Lodge Image 2</p>
+          <img src="./douglasSiteImages/DSCLibraryCornerstone.jpg" alt="Lodge Image 2"  style={{ width: '500px', height: '300px', objectFit: 'cover', margin: '0 auto' }} />
         </div>
         <div>
-          <img src="./douglasSiteImages/jobsDaughtersColorado.png" alt="Lodge Image 3" />
-          <p className="legend">Lodge Image 3</p>
+          <img src="./douglasSiteImages/parkerPDLogo.png" alt="Lodge Image 3"  style={{ width: '300px', height: '400px', objectFit: 'cover', margin: '0 auto' }} />
         </div>
-        {/* Add more images as needed */}
       </Carousel>
     
           {/* Grid for additional content */}

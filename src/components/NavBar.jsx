@@ -1,12 +1,18 @@
 import * as React from 'react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { AppBar, Toolbar, Typography, Button, IconButton, Drawer, List, ListItem, ListItemText } from '@mui/material';
+import { AppBar, Toolbar, Typography, Button, IconButton, Drawer, List, ListItem, ListItemText, Collapse } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import Logo from '/douglasLogo.jpg.jpg'; // import your logo
 
 const NavBar = () => {
   const [isDrawerOpen, setDrawerOpen] = useState(false);
+  const [open, setOpen] = useState(false);
+
+  const handleClick = (event) => {
+    event.stopPropagation(); // Prevents the drawer from closing
+    setOpen(!open);
+  };
 
   const toggleDrawer = (open) => (event) => {
     if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
@@ -15,15 +21,34 @@ const NavBar = () => {
     setDrawerOpen(open);
   };
 
-  // List items
   const list = () => (
     <div role="presentation" onClick={toggleDrawer(false)} onKeyDown={toggleDrawer(false)} style={{width: '100%'}}>
       <List>
-        {['Home', 'About', 'History', 'Members', 'Prospects', 'Community', 'Cornerstone'].map((text) => (
-          <ListItem button key={text} component={Link} to={'/' + (text.toLowerCase() === 'home' ? '' : text.toLowerCase())}>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
+        <ListItem key={'home'} component={Link} to={'/'}>
+          <ListItemText primary={'Home'} />
+        </ListItem>
+        <ListItem key={'about'} component={Link} to={'/about'}>
+          <ListItemText primary={'About'} />
+        </ListItem>
+        <ListItem key={'communitySquare'} component={Link} to={'/community'}>
+          <ListItemText primary={'Community Square'}/>
+        </ListItem>
+        <ListItem key={'widowsAndOrphans'} onClick={handleClick}>
+          <ListItemText primary={'Widows & Orphans'} />
+        </ListItem>
+        <Collapse in={open} timeout="auto" unmountOnExit>
+          <List component="div" disablePadding>
+            <ListItem key={'subLink1'} component={Link} to={'/widowsAndOrphans/information'}>
+              <ListItemText primary={'Information'} />
+            </ListItem>
+            <ListItem key={'subLink2'} component={Link} to={'/widowsAndOrphans/resources'}>
+              <ListItemText primary={'Helpful Resources'} />
+            </ListItem>
+          </List>
+        </Collapse>
+        <ListItem key={'associatedBodies'} component={Link} to={'/community'}>
+          <ListItemText primary={'Associated Bodies'} />
+        </ListItem>
       </List>
     </div>
   );
