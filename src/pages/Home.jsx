@@ -152,13 +152,16 @@ const Home = () => {
         <Box sx={{ mt: 4 }}>
           <Carousel showThumbs={false} showStatus={false} infiniteLoop autoPlay interval={3000}>
             <div>
-              <img src="./public/lodgebuildingcirca2022.jpg" alt="Douglas Lodge" style={{ width: '300px', height: '300px', objectFit: 'cover', margin: '0 auto' }} />
+              <img src="./douglasSiteImages/squareAndCompassBlue.jpg" alt="Douglas Lodge" style={{ width: '300px', height: '300px', objectFit: 'cover', margin: '0 auto' }} />
             </div>
             <div>
-              <img src="./public/west-door.jpg" alt="West Door" style={{ width: '300px', height: '300px', objectFit: 'cover', margin: '0 auto' }} />
+              <img src="./lodgebuildingcirca2022.jpg" alt="Douglas Lodge" style={{ width: '300px', height: '300px', objectFit: 'cover', margin: '0 auto' }} />
             </div>
             <div>
-              <img src="./public/douglasSiteImages/uncleSam.jpg" alt="Uncle Sam" style={{ width: '300px', height: '300px', objectFit: 'cover', margin: '0 auto' }} />
+              <img src="./westDoor.jpg" alt="West Door" style={{ width: '300px', height: '300px', objectFit: 'cover', margin: '0 auto' }} />
+            </div>
+            <div>
+              <img src="./douglasSiteImages/uncleSam.jpg" alt="Uncle Sam" style={{ width: '300px', height: '300px', objectFit: 'cover', margin: '0 auto' }} />
             </div>
           </Carousel>
         </Box>

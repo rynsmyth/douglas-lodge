@@ -3,14 +3,14 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AppBar, Toolbar, Typography, Button, IconButton, Drawer, List, ListItem, ListItemText, Collapse } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import Logo from '/douglasLogo.jpg.jpg'; // import your logo
+import Logo from '/douglasLogo.jpg';
 
 const NavBar = () => {
   const [isDrawerOpen, setDrawerOpen] = useState(false);
   const [open, setOpen] = useState(false);
 
   const handleClick = (event) => {
-    event.stopPropagation(); // Prevents the drawer from closing
+    event.stopPropagation();
     setOpen(!open);
   };
 
