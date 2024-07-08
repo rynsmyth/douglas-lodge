@@ -26,14 +26,14 @@ const HeroSection = () => {
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundImage: 'url(/douglas-lodge/Resized_Resized_Douglas_Lodge_No._153_AF&AM_BLUE.jpeg)',
-        backgroundPosition: 'center',
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
+        backgroundImage: "url(/douglas-lodge/Resized_Resized_Douglas_Lodge_No._153_AF&AM_BLUE.jpeg)",
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
         color: 'white',
-        width: '100%',
-        margin: '0 auto',
-        overflow: 'hidden',
+        width: '100%', // Ensures the section spans the full viewport width
+        margin: '0 auto', // Centers the section if it's not already
+        overflowX: 'hidden', 
       }}
     />
   );
@@ -161,7 +161,7 @@ const Home = () => {
               <img src="./westDoor.jpg" alt="West Door" style={{ width: '300px', height: '300px', objectFit: 'cover', margin: '0 auto' }} />
             </div>
             <div>
-              <img src="./douglasSiteImages/uncleSam.jpg" alt="Uncle Sam" style={{ width: '300px', height: '300px', objectFit: 'cover', margin: '0 auto' }} />
+              <img src="./douglasSiteImages/uncleSam.jpg" alt="Uncle Sam" style={{ width: '300px', height: '400px', objectFit: 'cover', margin: '0 auto' }} />
             </div>
           </Carousel>
         </Box>
