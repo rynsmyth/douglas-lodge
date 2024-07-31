@@ -10,6 +10,7 @@ import Prospects from './pages/Prospects';
 import Community from './pages/Community';
 import Footer from './components/Footer';
 import Cornerstone from './pages/Cornerstone';
+import FAQ from './pages/FAQ';
 
 const Offset = styled('div')(({ theme }) => theme.mixins.toolbar);
 
@@ -37,6 +38,7 @@ function App() {
       <Route path="/community" element={<Community />} />
       <Route path="/members" element={<Members />} />
       <Route path="/cornerstone" element={<Cornerstone />} />
+      <Route path="/faq" element={<FAQ />} />
     </Routes>
     </Box>
     </><Footer /></>

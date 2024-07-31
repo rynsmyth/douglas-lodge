@@ -49,6 +49,9 @@ const NavBar = () => {
         <ListItem key={'associatedBodies'} component={Link} to={'/community'}>
           <ListItemText primary={'Associated Bodies'} />
         </ListItem>
+        <ListItem key={'faq'} component={Link} to={'/faq'}>
+          <ListItemText primary={'FAQ'} />
+        </ListItem>
       </List>
     </div>
   );

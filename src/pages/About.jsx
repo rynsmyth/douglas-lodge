@@ -149,7 +149,7 @@ const ContactModal = ({ open, handleClose }) => {
     </Modal>
   );
 };
-
+console.log(import.meta.env.BASE_URL);
 const ProspectInfoModal = ({ open, handleClose }) => {
   const handleDownload = () => {
     saveAs(
@@ -165,7 +165,7 @@ const ProspectInfoModal = ({ open, handleClose }) => {
           Prospect Information
         </Typography>
         <Box sx={{ height: '500px', overflow: 'auto' }}>
-          <Document file={`${import.meta.env.BASE_URL}douglasSiteImages/Petition for degrees.pdf`}>
+          <Document file={`public/douglasSiteImages/Petition for degrees.pdf`}>
             <Page pageNumber={1} />
           </Document>
         </Box>
@@ -191,6 +191,7 @@ const modalStyle = {
   boxShadow: 24,
   p: 4,
   borderRadius: 2,
+  width: 600, // Increase the width to fit the PDF preview
 };
 
 const About = () => {

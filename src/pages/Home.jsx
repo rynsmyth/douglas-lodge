@@ -22,22 +22,20 @@ const HeroSection = () => {
     <Box
       sx={{
         height: '100vh',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
+        width: '100%',
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        zIndex: -1,
         backgroundImage: "url(/douglas-lodge/Resized_Resized_Douglas_Lodge_No._153_AF&AM_BLUE.jpeg)",
         backgroundPosition: "center",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
-        color: 'white',
-        width: '100%', // Ensures the section spans the full viewport width
-        margin: '0 auto', // Centers the section if it's not already
-        overflowX: 'hidden', 
       }}
     />
   );
 };
+
 
 const ContactModal = ({ open, handleClose }) => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
@@ -124,9 +122,9 @@ const Home = () => {
   };
 
   return (
-    <Box sx={{ flexGrow: 1, overflowX: 'hidden' }}>
+    <Box sx={{ flexGrow: 1, overflowX: 'hidden', position: 'relative', zIndex: 1 }}>
       <HeroSection />
-      <Container>
+      <Container sx={{ backgroundColor: 'rgba(255, 255, 255, 0.8)', mt: '100vh', pt: 4 }}>
         <Typography variant="h3" sx={{ textAlign: 'center', mt: 4 }}>
           Discover the history and values of Freemasonry.
         </Typography>

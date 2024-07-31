@@ -2,10 +2,10 @@ import React from "react";
 import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
-import Grid from "@mui/material/Unstable_Grid2"; // Make sure you're ready for any potential breaking changes in future updates
-import { Typography } from "@mui/material";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // Requires CSS file
-import { Carousel } from 'react-responsive-carousel';
+import Grid from "@mui/material/Unstable_Grid2";
+import { Typography, List, ListItem, ListItemText, Link } from "@mui/material";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from "react-responsive-carousel";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -16,15 +16,14 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 const Community = () => {
-    return (
-          <Box sx={{ flexGrow: 1, overflowX: 'hidden' }}> {/* Prevents horizontal scrolling */}
-          {/* Hero Section */}
-          <Typography variant="h3" style={{ textAlign: 'center' }}>
-              Community Square
-            </Typography>
+  return (
+    <Box sx={{ flexGrow: 1, overflowX: "hidden" }}>
+      <Typography variant="h3" align="center" gutterBottom>
+        Community Square
+      </Typography>
 
       <Carousel showThumbs={false} showStatus={false} infiniteLoop autoPlay interval={3000}>
-        <div>
+      <div>
           <img src="./douglasSiteImages/castleRockFirelogo.png" alt="Lodge Image 1"  style={{ width: '300px', height: '300px', objectFit: 'cover', margin: '0 auto' }} />
         </div>
         <div>
@@ -34,25 +33,81 @@ const Community = () => {
           <img src="./douglasSiteImages/parkerPDLogo.png" alt="Lodge Image 3"  style={{ width: '300px', height: '400px', objectFit: 'cover', margin: '0 auto' }} />
         </div>
       </Carousel>
-    
-          {/* Grid for additional content */}
-          <Grid container spacing={2} sx={{ width: '100vw', margin: '0', '& > .MuiGrid2-root': { paddingLeft: '0', paddingRight: '0' } }}>
-            <Grid xs={6} md={8} item>
-            <Item>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.</Item>
-            </Grid>
-            <Grid xs={6} md={4} item>
-            <Item>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.</Item>
-            </Grid>
-            <Grid xs={6} md={4} item>
-            <Item>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.</Item>
-            </Grid>
-            <Grid xs={6} md={8} item>
-            <Item>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.</Item>
-            </Grid>
+
+      <Box sx={{ padding: "2rem" }}>
+        <Typography variant="h4" align="center" gutterBottom>
+          Our Community
+        </Typography>
+        <Typography variant="body1" align="center" paragraph>
+        Since our “operative” stone mason days in the Middle Ages, to the present day “speculative” fraternity, Freemasons have been builders within their community.  The Brothers of Douglas Lodge No. 153 have been ardent supporters of the Town of Castle Rock and Douglas County for over 100 years. Our brethren, through their obligations of service, business acumen, and charitable hearts have strived to build a better community alongside our fellow citizens. From the humble beginnings of our town, we played a role in bringing electricity and sewer services to Castle Rock. During the hard times of the Great Depression, our brothers granted loans to help the local rancher and small businesses, and our shop owners provided critical services to those in need. We were instrumental in erecting the Star on Castle Rock, establishing the public library, and even bringing critical water rights to the town.
+
+We ask for nothing in return. We are overjoyed to work alongside our fellow townsfolk for the betterment of the community. Whether marching out in front or quietly extending a helping hand of charity, we strive to do good works in Hope, by Faith, and through Charity to become better men and Masons. Thank you for visiting our website and please drop us a note if you have ideas on how we can work together to build something beautiful.        </Typography>
+
+        <Grid container spacing={4} justifyContent="center" sx={{ marginTop: "2rem" }}>
+          <Grid xs={12} md={6} item>
+            <Item>
+              <Typography variant="h5" gutterBottom>
+                Community Events
+              </Typography>
+              <Typography variant="body2">
+                Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500.
+              </Typography>
+              <List>
+                <ListItem>
+                  <ListItemText
+                    primary={<Link href="#" color="inherit">Event 1</Link>}
+                    secondary="Date: XX/XX/XXXX"
+                  />
+                </ListItem>
+                <ListItem>
+                  <ListItemText
+                    primary={<Link href="#" color="inherit">Event 2</Link>}
+                    secondary="Date: XX/XX/XXXX"
+                  />
+                </ListItem>
+                <ListItem>
+                  <ListItemText
+                    primary={<Link href="#" color="inherit">Event 3</Link>}
+                    secondary="Date: XX/XX/XXXX"
+                  />
+                </ListItem>
+              </List>
+            </Item>
           </Grid>
-        </Box>
-    );
-  };
-  
-  export default Community;
-  
+          <Grid xs={12} md={6} item>
+            <Item>
+              <Typography variant="h5" gutterBottom>
+                Local Partnerships
+              </Typography>
+              <Typography variant="body2">
+                Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500.
+              </Typography>
+              <List>
+                <ListItem>
+                  <ListItemText
+                    primary={<Link href="#" color="inherit">Partner 1</Link>}
+                    secondary="Description of partnership"
+                  />
+                </ListItem>
+                <ListItem>
+                  <ListItemText
+                    primary={<Link href="#" color="inherit">Partner 2</Link>}
+                    secondary="Description of partnership"
+                  />
+                </ListItem>
+                <ListItem>
+                  <ListItemText
+                    primary={<Link href="#" color="inherit">Partner 3</Link>}
+                    secondary="Description of partnership"
+                  />
+                </ListItem>
+              </List>
+            </Item>
+          </Grid>
+        </Grid>
+      </Box>
+    </Box>
+  );
+};
+
+export default Community;
