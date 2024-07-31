@@ -257,6 +257,11 @@ const About = () => {
           borderRadius: 2,
         }}
       />
+            <Item>
+            <Typography variant="body2">
+              “But who so looketh in the perfect law of liberty, and continueth therein, he not being a forgetful hearer, but a doer of the work, shall be blessed in his deed” James 1:25
+            </Typography>
+          </Item>
       <Masonry columns={{ xs: 1, sm: 2, md: 3 }} spacing={2}>
         <Item>
           <Typography variant="h4" sx={{ textAlign: "center", mb: 4 }}>
