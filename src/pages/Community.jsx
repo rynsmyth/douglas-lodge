@@ -32,6 +32,36 @@ const Community = () => {
         <div>
           <img src="./douglasSiteImages/parkerPDLogo.png" alt="Lodge Image 3"  style={{ width: '300px', height: '400px', objectFit: 'cover', margin: '0 auto' }} />
         </div>
+        <div>
+          <img src="./douglasSiteImages/communitysquarepage/5178856_17bb4472824a40eeab5bf67efdd03004-1173662731.gif" alt="Lodge Image 4"  style={{ width: '600px', height: '600px', objectFit: 'cover', margin: '0 auto' }} />
+        </div>
+        <div>
+          <img src="./douglasSiteImages/communitysquarepage/20230916_153407.jpg" alt="Lodge Image 5"  style={{ width: '300px', height: '400px', objectFit: 'cover', margin: '0 auto' }} />
+        </div>
+        <div>
+          <img src="./douglasSiteImages/communitysquarepage/20240615_124906.jpg" alt="Lodge Image 6"  style={{ width: '300px', height: '400px', objectFit: 'cover', margin: '0 auto' }} />
+        </div>
+        <div>
+          <img src="./douglasSiteImages/communitysquarepage/20240727_104455_resized.jpg" alt="Lodge Image 7"  style={{ width: '300px', height: '400px', objectFit: 'cover', margin: '0 auto' }} />
+        </div>
+        <div>
+          <img src="./douglasSiteImages/communitysquarepage/20240727_104958_resized.jpg" alt="Lodge Image 8"  style={{ width: '300px', height: '400px', objectFit: 'cover', margin: '0 auto' }} />
+        </div>
+        <div>
+          <img src="./douglasSiteImages/communitysquarepage/AAlogo-1-889156142.jpg" alt="Lodge Image 9"  style={{ width: '100%', height: '400px', objectFit: 'cover', margin: '0 auto' }} />
+        </div>
+        <div>
+          <img src="./douglasSiteImages/communitysquarepage/CRC_horizontal_color_cropped-302x93.png" alt="Lodge Image 10"  style={{ width: '800px', height: '400px', objectFit: 'cover', margin: '0 auto' }} />
+        </div>
+        <div>
+          <img src="./douglasSiteImages/communitysquarepage/CRPD LOGO.png" alt="Lodge Image 11"  style={{ width: '600px', height: '500px', objectFit: 'cover', margin: '0 auto' }} />
+        </div>
+        <div>
+          <img src="./douglasSiteImages/communitysquarepage/dcl-logo.svg" alt="Lodge Image 12"  style={{ width: '400px', height: '400px', objectFit: 'cover', margin: '0 auto' }} />
+        </div>
+        <div>
+          <img src="./douglasSiteImages/communitysquarepage/DCSO CoinLogo-Real-Badge-1015x1024.png" alt="Lodge Image 13"  style={{ width: '400px', height: '400px', objectFit: 'cover', margin: '0 auto' }} />
+        </div>
       </Carousel>
 
       <Box sx={{ padding: "2rem" }}>
@@ -50,25 +80,26 @@ We ask for nothing in return. We are overjoyed to work alongside our fellow town
                 Community Events
               </Typography>
               <Typography variant="body2">
-                Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500.
+                Come See Us!
               </Typography>
               <List>
                 <ListItem>
                   <ListItemText
-                    primary={<Link href="#" color="inherit">Event 1</Link>}
-                    secondary="Date: XX/XX/XXXX"
+                    primary={<Link href="#" color="inherit">Oktoberfest Open House</Link>}
+                    secondary='Sunday September 22, 2024 9am to 4pm'
+                    
                   />
                 </ListItem>
                 <ListItem>
                   <ListItemText
-                    primary={<Link href="#" color="inherit">Event 2</Link>}
-                    secondary="Date: XX/XX/XXXX"
+                    primary={<div><Link href="#" color="inherit">Lecture: “Philip S. Miller; the Man, the Mason”</Link><br></br><span color="inherit">Philip S. Miller Library</span><br></br><span color="inherit">Event Hall B</span></div>}
+                    secondary="Sunday September 22, 2024 2pm to 3pm"
                   />
                 </ListItem>
                 <ListItem>
                   <ListItemText
-                    primary={<Link href="#" color="inherit">Event 3</Link>}
-                    secondary="Date: XX/XX/XXXX"
+                    primary={<div><Link href="#" color="inherit">FREE Child ID Event</Link><br></br><span>Philip S. Miller Library</span><br></br><span>Conference Room D</span></div>}
+                    secondary="Saturday October 19, 2024 11am to 12:30pm"
                   />
                 </ListItem>
               </List>
