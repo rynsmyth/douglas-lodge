@@ -85,20 +85,20 @@ We ask for nothing in return. We are overjoyed to work alongside our fellow town
               <List>
                 <ListItem>
                   <ListItemText
-                    primary={<Link href="#" color="inherit">Oktoberfest Open House</Link>}
+                    primary={<span color="inherit">Oktoberfest Open House</span>}
                     secondary='Sunday September 22, 2024 9am to 4pm'
                     
                   />
                 </ListItem>
                 <ListItem>
                   <ListItemText
-                    primary={<div><Link href="#" color="inherit">Lecture: “Philip S. Miller; the Man, the Mason”</Link><br></br><span color="inherit">Philip S. Miller Library</span><br></br><span color="inherit">Event Hall B</span></div>}
+                    primary={<div><span href="#" color="inherit">Lecture: “Philip S. Miller; the Man, the Mason”</span><br></br><span color="inherit">Philip S. Miller Library</span><br></br><span color="inherit">Event Hall B</span></div>}
                     secondary="Sunday September 22, 2024 2pm to 3pm"
                   />
                 </ListItem>
                 <ListItem>
                   <ListItemText
-                    primary={<div><Link href="#" color="inherit">FREE Child ID Event</Link><br></br><span>Philip S. Miller Library</span><br></br><span>Conference Room D</span></div>}
+                    primary={<div><span href="#" color="inherit">FREE Child ID Event</span><br></br><span>Philip S. Miller Library</span><br></br><span>Conference Room D</span></div>}
                     secondary="Saturday October 19, 2024 11am to 12:30pm"
                   />
                 </ListItem>
