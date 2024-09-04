@@ -6,22 +6,17 @@ import {
   Typography,
   Button,
   Modal,
-  TextField,
   Card,
   CardContent,
-  Checkbox,
-  FormControlLabel
 } from "@mui/material";
 import Masonry from "@mui/lab/Masonry";
 import emailjs from "emailjs-com";
-import { Document, Page, pdfjs } from "react-pdf";
 import { saveAs } from "file-saver";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // Requires CSS file
 import { Carousel } from "react-responsive-carousel";
 import "../App.css";
-
-// Configure PDF.js worker
-pdfjs.GlobalWorkerOptions.workerSrc = `${import.meta.env.BASE_URL}js/pdf.worker.js`;
+import { InstagramEmbed } from 'react-social-media-embed';
+import { ContactModal } from "../components/ContactModal";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor:
@@ -38,145 +33,28 @@ const Item = styled(Paper)(({ theme }) => ({
   marginBottom: theme.spacing(2),
 }));
 
-const ContactModal = ({ open, handleClose }) => {
-  const [formData, setFormData] = useState({
-    name: "",
-    phone: "",
-    email: "",
-    ofAge: false,
-    message: "",
-  });
+const CarouselImage = styled("img")({
+  maxWidth: "100%",
+  maxHeight: "400px",
+  objectFit: "contain",
+  margin: "0 auto",
+});
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
-
-  const handleCheckboxChange = (e) => {
-    const { name, checked } = e.target;
-    setFormData({ ...formData, [name]: checked });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    // Your EmailJS user ID, service ID, and template ID
-    const userID = 'your_emailjs_user_id';
-    const serviceID = 'your_email_service_id';
-    const templateID = 'your_email_template_id';
-
-    // Prepare the template parameters
-    const templateParams = {
-      name: formData.name,
-      phone: formData.phone,
-      email: formData.email,
-      ofAge: formData.ofAge ? "Yes" : "No",
-      message: formData.message
-    };
-
-    emailjs.send(serviceID, templateID, templateParams, userID)
-      .then((response) => {
-        console.log('SUCCESS!', response.status, response.text);
-        alert('Email successfully sent!');
-        handleClose();
-      }, (error) => {
-        console.log('FAILED...', error);
-        alert('Failed to send email. Please try again later.');
-      });
-  };
-
-  return (
-    <Modal open={open} onClose={handleClose}>
-      <Box sx={{ ...modalStyle, width: 400 }}>
-        <Typography variant="h6" component="h2" gutterBottom>
-          Contact Us
-        </Typography>
-        <form onSubmit={handleSubmit}>
-          <TextField
-            label="Name"
-            name="name"
-            value={formData.name}
-            onChange={handleInputChange}
-            fullWidth
-            margin="normal"
-            required
-          />
-          <TextField
-            label="Phone"
-            name="phone"
-            type="phone"
-            value={formData.phone}
-            onChange={handleInputChange}
-            fullWidth
-            margin="normal"
-            required
-          />
-          <TextField
-            label="Email"
-            name="email"
-            type="email"
-            value={formData.email}
-            onChange={handleInputChange}
-            fullWidth
-            margin="normal"
-            required
-          />
-          <FormControlLabel
-            control={<Checkbox checked={formData.ofAge} onChange={handleCheckboxChange} name="ofAge" />}
-            label="Are you over 18?"
-          />
-          <TextField
-            label="Message"
-            name="message"
-            multiline
-            rows={4}
-            value={formData.message}
-            onChange={handleInputChange}
-            fullWidth
-            margin="normal"
-            required
-          />
-          <Button
-            type="submit"
-            variant="contained"
-            color="primary"
-            sx={{ mt: 2 }}
-          >
-            Submit
-          </Button>
-        </form>
-      </Box>
-    </Modal>
-  );
-};
-console.log(import.meta.env.BASE_URL);
 const ProspectInfoModal = ({ open, handleClose }) => {
-  const handleDownload = () => {
-    saveAs(
-      `${import.meta.env.BASE_URL}douglasSiteImages/Petition for degrees.pdf`,
-      'Prospect_Info.pdf'
-    );
-  };
-
   return (
     <Modal open={open} onClose={handleClose}>
-      <Box sx={{ ...modalStyle, width: 600 }}>
-        <Typography variant="h6" component="h2" gutterBottom>
-          Prospect Information
-        </Typography>
-        <Box sx={{ height: '500px', overflow: 'auto' }}>
-          <Document file={`public/douglasSiteImages/Petition for degrees.pdf`}>
-            <Page pageNumber={1} />
-          </Document>
+      <Box sx={{ ...modalStyle, width: { xs: '90%', sm: '80%', md: 800 } }}>
+        <Box sx={{ height: '80vh', overflow: 'auto' }}>
+          <Typography variant="h6" component="h2" gutterBottom>
+            Prospect Information
+          </Typography>
+          <iframe
+            src="public/douglasSiteImages/Petition for degrees.pdf"
+            width="100%"
+            height="100%"
+            title="Prospect Information"
+          />
         </Box>
-        <Button
-          variant="contained"
-          color="primary"
-          sx={{ mt: 2 }}
-          onClick={handleDownload}
-        >
-          Download PDF
-        </Button>
       </Box>
     </Modal>
   );
@@ -191,7 +69,7 @@ const modalStyle = {
   boxShadow: 24,
   p: 4,
   borderRadius: 2,
-  width: 600, // Increase the width to fit the PDF preview
+  width: { xs: '90%', sm: '80%', md: 600 },
 };
 
 const About = () => {
@@ -220,27 +98,27 @@ const About = () => {
         About our Lodge
       </Typography>
       <Item>
-            <Typography variant="body1">
-              A dispensation was issued on May 5, 1919 to form a lodge at
-              Sedalia, Colorado. This dispensation was granted by MW Brother
-              Clarence M. Kellogg. The Lodge was known as Sedalia Lodge U.D. The
-              Lodge held 12 regular communications before the next Grand Lodge
-              session and was congratulated by the Committee on Returns and Work
-              for the neat and careful keeping of records. The Charter was
-              granted October 8, 1919 under the name of Douglas Lodge #153 with
-              32 charter members. Constitution of the Lodge was held October 20,
-              1919 with MW Brother Frank L. Bishop officiating. March 30, 1937,
-              Brother LOUIS R. HIGBY purchased the present Lodge building on the
-              corner of 3rd and Wilcox in Castle Rock as a trustee of Douglas
-              Lodge. The building was built in 1904 for the First National Bank
-              of Douglas County which occupied the building for 29 years. During
-              the depression in 1933, the bank closed and the building stood
-              vacant until the Lodge purchase in 1937.
-            </Typography>
-          </Item>
-          <Box
+        <Typography variant="body1">
+          A dispensation was issued on May 5, 1919 to form a lodge at
+          Sedalia, Colorado. This dispensation was granted by MW Brother
+          Clarence M. Kellogg. The Lodge was known as Sedalia Lodge U.D. The
+          Lodge held 12 regular communications before the next Grand Lodge
+          session and was congratulated by the Committee on Returns and Work
+          for the neat and careful keeping of records. The Charter was
+          granted October 8, 1919 under the name of Douglas Lodge #153 with
+          32 charter members. Constitution of the Lodge was held October 20,
+          1919 with MW Brother Frank L. Bishop officiating. March 30, 1937,
+          Brother LOUIS R. HIGBY purchased the present Lodge building on the
+          corner of 3rd and Wilcox in Castle Rock as a trustee of Douglas
+          Lodge. The building was built in 1904 for the First National Bank
+          of Douglas County which occupied the building for 29 years. During
+          the depression in 1933, the bank closed and the building stood
+          vacant until the Lodge purchase in 1937.
+        </Typography>
+      </Item>
+      <Box
         sx={{
-          height: "75vh",
+          height: { xs: "50vh", md: "75vh" },
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
@@ -250,18 +128,18 @@ const About = () => {
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           color: "white",
-          width: "100vw",
+          width: "100%",
           margin: "0 auto",
           overflowX: "hidden",
           my: 4,
           borderRadius: 2,
         }}
       />
-            <Item>
-            <Typography variant="body2">
-              “But who so looketh in the perfect law of liberty, and continueth therein, he not being a forgetful hearer, but a doer of the work, shall be blessed in his deed” James 1:25
-            </Typography>
-          </Item>
+      <Item>
+        <Typography variant="body2">
+          “But who so looketh in the perfect law of liberty, and continueth therein, he not being a forgetful hearer, but a doer of the work, shall be blessed in his deed” James 1:25
+        </Typography>
+      </Item>
       <Masonry columns={{ xs: 1, sm: 2, md: 3 }} spacing={2}>
         <Item>
           <Typography variant="h4" sx={{ textAlign: "center", mb: 4 }}>
@@ -314,20 +192,26 @@ const About = () => {
               >
                 Location
               </Typography>
-              <Typography variant="body1">
-                300 Wilcox Street
-                <br />
-                Castle Rock, CO 80104
-              </Typography>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=300+Wilcox+Street,+Castle+Rock,+CO+80104"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Typography variant="body1">
+                  300 Wilcox Street
+                  <br />
+                  Castle Rock, CO 80104
+                </Typography>
+              </a>
             </CardContent>
           </Card>
-          <br/>
+          <br />
           <Item>
             <Button variant="contained" onClick={handleContactModalOpen}>
               Learn More
             </Button>
-            <br/>
-            <br/>
+            <br />
+            <br />
             <Button variant="contained" onClick={handleProspectModalOpen}>
               Prospect Info
             </Button>
@@ -345,39 +229,21 @@ const About = () => {
           interval={3000}
         >
           <div>
-            <img
+            <CarouselImage
               src="./douglasSiteImages/buildinghistorypageimages/manhartStore.jpg"
               alt="Lodge Image 1"
-              style={{
-                width: "300px",
-                height: "300px",
-                objectFit: "cover",
-                margin: "0 auto",
-              }}
             />
           </div>
           <div>
-            <img
+            <CarouselImage
               src="./douglasSiteImages/buildinghistorypageimages/josephCunninghamFirstWM.jpg"
               alt="Lodge Image 2"
-              style={{
-                width: "300px",
-                height: "300px",
-                objectFit: "cover",
-                margin: "0 auto",
-              }}
             />
           </div>
           <div>
-            <img
+            <CarouselImage
               src="./douglasSiteImages/washington_farewell.jpg"
               alt="Lodge Image 3"
-              style={{
-                width: "300px",
-                height: "300px",
-                objectFit: "cover",
-                margin: "0 auto",
-              }}
             />
           </div>
         </Carousel>

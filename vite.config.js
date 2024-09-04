@@ -16,6 +16,7 @@ export default defineConfig({
       '@mui/material/Grid',
       '@mui/material/ImageList',
       '@mui/material/ImageListItem',
+      'pdfjs-dist', 
     ],
   },
   plugins: [

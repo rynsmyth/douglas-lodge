@@ -33,7 +33,7 @@ const NavBar = () => {
         <ListItem key={'communitySquare'} component={Link} to={'/community'}>
           <ListItemText primary={'Community Square'}/>
         </ListItem>
-        <ListItem key={'widowsAndOrphans'} onClick={handleClick}>
+        {/* <ListItem key={'widowsAndOrphans'} onClick={handleClick}>
           <ListItemText primary={'Widows & Orphans'} />
         </ListItem>
         <Collapse in={open} timeout="auto" unmountOnExit>
@@ -45,10 +45,10 @@ const NavBar = () => {
               <ListItemText primary={'Helpful Resources'} />
             </ListItem>
           </List>
-        </Collapse>
-        <ListItem key={'associatedBodies'} component={Link} to={'/community'}>
+        </Collapse> */}
+        {/* <ListItem key={'associatedBodies'} component={Link} to={'/community'}>
           <ListItemText primary={'Associated Bodies'} />
-        </ListItem>
+        </ListItem> */}
         <ListItem key={'faq'} component={Link} to={'/faq'}>
           <ListItemText primary={'FAQ'} />
         </ListItem>
@@ -57,7 +57,7 @@ const NavBar = () => {
   );
 
   return (
-    <AppBar position="fixed">
+    <AppBar position="fixed" style={{backgroundColor: '#010d6b'}}>
       <Toolbar>
         <IconButton size="large" edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }} onClick={toggleDrawer(true)}>
           <MenuIcon />
@@ -65,7 +65,7 @@ const NavBar = () => {
         <Drawer anchor="left" open={isDrawerOpen} onClose={toggleDrawer(false)}>
           {list()}
         </Drawer>
-        <img src={Logo} alt="Logo" style={{ marginRight: '10px', height: '40px', width: 'auto' }} /> {/* Add your logo here */}
+        <img src={Logo} alt="Logo" style={{ marginRight: '10px', height: '40px', width: 'auto' }} />
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
           Douglas Lodge #153
         </Typography>
