@@ -44,12 +44,12 @@ const ProspectInfoModal = ({ open, handleClose }) => {
   return (
     <Modal open={open} onClose={handleClose}>
       <Box sx={{ ...modalStyle, width: { xs: '90%', sm: '80%', md: 800 } }}>
-        <Box sx={{ height: '80vh', overflow: 'auto' }}>
+        <Box sx={{ height: '90vh', overflow: 'auto' }}>
           <Typography variant="h6" component="h2" gutterBottom>
             Prospect Information
           </Typography>
           <iframe
-            src="./douglasSiteImages/Petition for degrees.pdf"
+            src="./2024 Douglas Lodge Introduction Pamphlet-min (2).pdf"
             width="100%"
             height="100%"
             title="Prospect Information"
@@ -149,7 +149,7 @@ const About = () => {
           </Typography>
           <Typography variant="body1">Worshipful Master: Joel Charles</Typography>
           <Typography variant="body1">Senior Warden: Thomas W. Adair</Typography>
-          <Typography variant="body1">Junior Warden: TJ Ward</Typography>
+          <Typography variant="body1">Junior Warden: T.J. Ward</Typography>
           <Typography variant="body1">Treasurer: Ricardo Dena</Typography>
           <Typography variant="body1">Secretary: Jeffery A. Noakes</Typography>
           <Typography variant="body1">Senior Deacon: Donald A. Davis</Typography>
