@@ -19,6 +19,13 @@ const Item = styled(Paper)(({ theme }) => ({
   marginBottom: theme.spacing(2),
 }));
 
+const CarouselImage = styled("img")({
+  maxWidth: "100%",
+  maxHeight: "400px",
+  objectFit: "contain",
+  margin: "0 auto",
+});
+
 const Home = () => {
   return (
     <Box sx={{ flexGrow: 1, overflowX: 'hidden', position: 'relative', zIndex: 1 }}>
@@ -49,16 +56,16 @@ const Home = () => {
         <Box sx={{ mt: 4 }}>
           <Carousel showThumbs={false} showStatus={false} infiniteLoop autoPlay interval={3000}>
             <div>
-              <img src="./douglasSiteImages/squareAndCompassBlue.jpg" alt="Douglas Lodge" style={{ width: '100%', height: 'auto', objectFit: 'cover', margin: '0 auto' }} />
+              <CarouselImage src="./douglasSiteImages/squareAndCompassBlue.jpg" alt="Douglas Lodge" />
             </div>
             <div>
-              <img src="./lodgebuildingcirca2022.jpg" alt="Douglas Lodge" style={{ width: '100%', height: 'auto', objectFit: 'cover', margin: '0 auto' }} />
+              <CarouselImage src="./lodgebuildingcirca2022.jpg" alt="Douglas Lodge"/>
             </div>
             <div>
-              <img src="./westDoor.jpg" alt="West Door" style={{ width: '100%', height: 'auto', objectFit: 'cover', margin: '0 auto' }} />
+              <CarouselImage src="./westDoor.jpg" alt="West Door"/>
             </div>
             <div>
-              <img src="./douglasSiteImages/uncleSam.jpg" alt="Uncle Sam" style={{ width: '100%', height: 'auto', objectFit: 'cover', margin: '0 auto' }} />
+              <CarouselImage src="./douglasSiteImages/uncleSam.jpg" alt="Uncle Sam"/>
             </div>
           </Carousel>
           <Footer />

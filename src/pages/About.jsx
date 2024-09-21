@@ -49,7 +49,7 @@ const ProspectInfoModal = ({ open, handleClose }) => {
             Prospect Information
           </Typography>
           <iframe
-            src="public/douglasSiteImages/Petition for degrees.pdf"
+            src="./douglasSiteImages/Petition for degrees.pdf"
             width="100%"
             height="100%"
             title="Prospect Information"
@@ -128,11 +128,13 @@ const About = () => {
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           color: "white",
-          width: "100%",
+          maxWidth: "100%",
+          maxHeight: "400px",
+          objectFit: "contain",
           margin: "0 auto",
           overflowX: "hidden",
           my: 4,
-          borderRadius: 2,
+          borderRadius: 1,
         }}
       />
       <Item>
