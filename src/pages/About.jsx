@@ -238,7 +238,7 @@ const About = () => {
           </div>
           <div>
             <CarouselImage
-              src="./douglasSiteImages/buildinghistorypageimages/josephCunninghamFirstWM.jpg"
+              src="./douglasSiteImages/buildinghistorypageimages/josephCunninghamFirstWM_croped.jpg"
               alt="Lodge Image 2"
             />
           </div>
