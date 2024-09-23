@@ -11,7 +11,7 @@ const HeroSection = () => {
         top: 0,
         left: 0,
         zIndex: -1,
-        backgroundImage: "url(/douglas-lodge/Resized_Resized_Douglas_Lodge_No._153_AF&AM_BLUE.jpeg)",
+        backgroundImage: "url(./Resized_Resized_Douglas_Lodge_No._153_AF&AM_BLUE.jpeg)",
         backgroundPosition: "center",
         backgroundSize: {
           xs: 'cover', // small screens
