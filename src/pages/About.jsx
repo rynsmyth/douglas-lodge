@@ -123,7 +123,7 @@ const About = () => {
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
-          backgroundImage: "url(/douglas-lodge/2024Officers.jpg)",
+          backgroundImage: "url(./2024Officers.jpg)",
           backgroundPosition: "center",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
