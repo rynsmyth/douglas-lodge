@@ -124,6 +124,30 @@ const Community = () => {
               </List>
             </Item>
           </Grid>
+                    <Grid xs={12} md={6} item>
+            <Item>
+              <Typography variant="h5" gutterBottom>
+                Masonic Charities
+              </Typography>
+              <List>
+              <ListItem>
+                  <ListItemText
+                    primary={<Link href="https://www.shrinerschildrens.org/en" color="inherit">Shriner’s Hospital for Children</Link>}
+                  />
+                </ListItem>
+                <ListItem>
+                  <ListItemText
+                    primary={<Link href="https://ritecareco.org/" color="inherit">RiteCare Colorado</Link>}
+                  />
+                </ListItem>
+                <ListItem>
+                  <ListItemText
+                    primary={<Link href="https://www.ktef.org/" color="inherit">Knights Templar Eye Foundation</Link>}
+                  />
+                </ListItem>
+              </List>
+            </Item>
+          </Grid>
           <Grid xs={12} md={6} item>
             <Item>
               <Typography variant="h5" gutterBottom>
