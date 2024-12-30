@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AppBar, Toolbar, Typography, Button, IconButton, Drawer, List, ListItem, ListItemText, Collapse } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import Logo from '/douglasLogo.jpg';
+import Logo from '../../public/douglasSiteImages/douglasLodgeSmallLogo.png';
 
 const NavBar = () => {
   const [isDrawerOpen, setDrawerOpen] = useState(false);

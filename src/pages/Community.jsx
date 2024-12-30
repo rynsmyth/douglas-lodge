@@ -26,7 +26,7 @@ const Community = () => {
         Community Square
       </Typography>
 
-      <Carousel showThumbs={false} showStatus={false} infiniteLoop autoPlay interval={3000}>
+      <Carousel showThumbs={false} showStatus={false} infiniteLoop autoPlay interval={6000}>
       <div>
           <CarouselImage src="./douglasSiteImages/castleRockFirelogo.png" alt="Lodge Image 1"/>
         </div>
@@ -86,39 +86,86 @@ const Community = () => {
               <List>
               <ListItem>
                   <ListItemText
-                    primary={<div><span color="inherit">Oktoberfest Open House</span><br></br><a
+                    primary={<div><span color="inherit">Stated Meeting/Fellowship</span><br></br><a
                       href="https://www.google.com/maps/search/?api=1&query=300+Wilcox+Street,+Castle+Rock,+CO+80104"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
                       <span color="inherit">Douglas Lodge #153</span>
                     </a></div>}
-                    secondary='Sunday September 22, 2024 9am to 4pm'
-                    
+                    secondary='Thursday January 2nd 7:30pm Stated Meeting/6:30pm Fellowship'    
                   />
                 </ListItem>
                 <ListItem>
                   <ListItemText
-                    primary={<div><span href="#" color="inherit">Lecture: “Philip S. Miller; the Man, the Mason”</span><br></br><a
-                      href="https://www.google.com/maps/search/?api=1&query=Philip+S.+Miller+Library,+Castle+Rock,+CO"
+                    primary={<div><span color="inherit">Hiram’s Coffee Club (non-members interested in masonry are welcome)</span><br></br><a
+                      href="https://www.google.com/maps/search/?api=1&query=300+Wilcox+Street,+Castle+Rock,+CO+80104"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <span color="inherit">Philip S. Miller Library</span>
-                    </a><br></br><span color="inherit">Event Hall B</span></div>}
-                    secondary="Sunday September 22, 2024 2pm to 3pm"
+                      <span color="inherit">Douglas Lodge #153</span>
+                    </a></div>}
+                    secondary='Sunday January 5th 8am to 10am' 
                   />
                 </ListItem>
                 <ListItem>
                   <ListItemText
-                    primary={<div><span href="#" color="inherit">FREE Child ID Event</span><br></br><a
-                      href="https://www.google.com/maps/search/?api=1&query=Philip+S.+Miller+Library,+Castle+Rock,+CO"
+                    primary={<div><span color="inherit">Stated Meeting (no dinner)</span><br></br><a
+                      href="https://www.google.com/maps/search/?api=1&query=300+Wilcox+Street,+Castle+Rock,+CO+80104"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <span color="inherit">Philip S. Miller Library</span>
-                    </a><br></br><span>Conference Room D</span></div>}
-                    secondary="Saturday October 19, 2024 11am to 12:30pm"
+                      <span color="inherit">Douglas Lodge #153</span>
+                    </a></div>}
+                    secondary='Thursday January 16th 7:30pm'
+                  />
+                </ListItem>
+                <ListItem>
+                  <ListItemText
+                    primary={<div><span color="inherit">Stated Meeting/Fellowship</span><br></br><a
+                      href="https://www.google.com/maps/search/?api=1&query=300+Wilcox+Street,+Castle+Rock,+CO+80104"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <span color="inherit">Douglas Lodge #153</span>
+                    </a></div>}
+                    secondary='Thursday February 6th 7:30pm Stated Meeting/6:30pm Fellowship'
+                  />
+                </ListItem>
+                <ListItem>
+                  <ListItemText
+                    primary={<div><span color="inherit">Stated Meeting</span><br></br><a
+                      href="https://www.google.com/maps/search/?api=1&query=300+Wilcox+Street,+Castle+Rock,+CO+80104"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <span color="inherit">Douglas Lodge #153</span>
+                    </a></div>}
+                    secondary='Thursday February 20th 7:30pm Stated Meeting/6:30pm dinner'
+                  />
+                </ListItem>
+                <ListItem>
+                  <ListItemText
+                    primary={<div><span color="inherit">Stated Meeting/Fellowship</span><br></br><a
+                      href="https://www.google.com/maps/search/?api=1&query=300+Wilcox+Street,+Castle+Rock,+CO+80104"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <span color="inherit">Douglas Lodge #153</span>
+                    </a></div>}
+                    secondary='Thursday March 5th 7:30pm Stated Meeting/6:30pm Fellowship'
+                  />
+                </ListItem>
+                <ListItem>
+                  <ListItemText
+                    primary={<div><span color="inherit">Stated Meeting</span><br></br><a
+                      href="https://www.google.com/maps/search/?api=1&query=300+Wilcox+Street,+Castle+Rock,+CO+80104"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <span color="inherit">Douglas Lodge #153</span>
+                    </a></div>}
+                    secondary='Thursday March 19th 7:30pm Stated Meeting/6:30pm dinner'
                   />
                 </ListItem>
               </List>
@@ -129,20 +176,26 @@ const Community = () => {
               <Typography variant="h5" gutterBottom>
                 Masonic Charities
               </Typography>
+              <Typography variant="body2">
+                Charity rests at the foundation of Freemasonry. It is estimated that Masonic institutions donate over $2M each day in an effort to aid those in need and strengthen our communities. Libraries, schools, hospitals, and countless others have benefited from the generosity of the largest and oldest fraternity the world has ever known. Our motto: Truth, Relief, and Brotherly Love is more than just Good men doing good works. It is a pledge of honor and commitment for the ages.
+              </Typography>
               <List>
-              <ListItem>
+                <ListItem sx={{ flexDirection: 'column', alignItems: 'center' }}>
                   <ListItemText
-                    primary={<Link href="https://www.shrinerschildrens.org/en" color="inherit">Shriner’s Hospital for Children</Link>}
+                    primary={<Link href="https://www.shrinerschildrens.org/en">Shriner’s Hospital for Children</Link>}
+                  />
+                  <Typography variant="body2">
+                  Douglas Lodge No. 153 is extremely proud of a continuing tradition of a Douglas Brother serving on the Board of Directors for <Link href="">Shriner’s Hospital for Children; Salt Lake City, Utah</Link>. These Brothers selflessly serve the hospital and the thousands of children who have had life affirming surgeries to make them whole again. They are an example of how we should live our lives as good and true Master Masons.
+                  </Typography>
+                </ListItem>
+                <ListItem sx={{ flexDirection: 'column', alignItems: 'center' }}>
+                  <ListItemText
+                    primary={<Link href="https://ritecareco.org/">RiteCare Colorado</Link>}
                   />
                 </ListItem>
-                <ListItem>
+                <ListItem sx={{ flexDirection: 'column', alignItems: 'center' }}>
                   <ListItemText
-                    primary={<Link href="https://ritecareco.org/" color="inherit">RiteCare Colorado</Link>}
-                  />
-                </ListItem>
-                <ListItem>
-                  <ListItemText
-                    primary={<Link href="https://www.ktef.org/" color="inherit">Knights Templar Eye Foundation</Link>}
+                    primary={<Link href="https://www.ktef.org/">Knights Templar Eye Foundation</Link>}
                   />
                 </ListItem>
               </List>

@@ -54,19 +54,65 @@ const Home = () => {
           </Grid>
         </Grid>
         <Box sx={{ mt: 4 }}>
-          <Carousel showThumbs={false} showStatus={false} infiniteLoop autoPlay interval={3000}>
-            <div>
+          <Carousel showThumbs={false} showStatus={false} infiniteLoop autoPlay interval={6000}>
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
               <CarouselImage src="./douglasSiteImages/squareAndCompassBlue.jpg" alt="Douglas Lodge" />
+            <Typography variant="caption" sx={{
+                  maxWidth: "100%",
+                  textAlign: 'center',
+                  padding: '10px',
+                  backgroundColor: '#f0f0f0',
+                  color: '#333',
+                  marginTop: '5px',
+                  marginBottom: "30px",
+                }}>
+                  Uncle Sam: A Symbol of American Freemasonry
+                </Typography>
             </div>
-            <div>
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
               <CarouselImage src="./lodgebuildingcirca2022.jpg" alt="Douglas Lodge"/>
+                {/* <Typography variant="caption" sx={{
+                  maxWidth: "100%",
+                  textAlign: 'center',
+                  padding: '10px',
+                  backgroundColor: '#f0f0f0',
+                  color: '#333',
+                  marginTop: '5px',
+                  marginBottom: "30px",
+                }}>
+                  Douglas Lodge #153 Front Door
+                </Typography> */}
             </div>
-            <div>
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
               <CarouselImage src="./westDoor.jpg" alt="West Door"/>
+            {/* <Typography variant="caption" sx={{
+                  maxWidth: "100%",
+                  textAlign: 'center',
+                  padding: '10px',
+                  backgroundColor: '#f0f0f0',
+                  color: '#333',
+                  marginTop: '5px',
+                  marginBottom: "30px",
+                }}>
+                  Uncle Sam: A Symbol of American Freemasonry
+                </Typography> */}
             </div>
             <div>
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
               <CarouselImage src="./douglasSiteImages/uncleSam.jpg" alt="Uncle Sam"/>
-            </div>
+          {/* <Typography variant="caption" sx={{
+                maxWidth: "100%",
+                textAlign: 'center',
+                padding: '10px',
+                backgroundColor: '#f0f0f0',
+                color: '#333',
+                marginTop: '5px',
+                marginBottom: "30px",
+              }}>
+                Uncle Sam: A Symbol of American Freemasonry
+              </Typography> */}
+          </div>
+          </div>
           </Carousel>
           <Footer />
         </Box>

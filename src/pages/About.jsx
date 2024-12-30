@@ -153,7 +153,7 @@ const About = () => {
           <Typography variant="body1">Treasurer: Ricardo Dena</Typography>
           <Typography variant="body1">Secretary: Jeffery A. Noakes</Typography>
           <Typography variant="body1">Senior Deacon: Donald A. Davis</Typography>
-          <Typography variant="body1">Junior Deacon: Kenneth C. Colton</Typography>
+          <Typography variant="body1">Junior Deacon: Christian Delarosa</Typography>
           <Typography variant="body1">Senior Steward: Richard A. Wright</Typography>
           <Typography variant="body1">Junior Steward: Frank J. Andrews</Typography>
           <Typography variant="body1">Chaplain: Lee Alexander</Typography>
@@ -228,19 +228,41 @@ const About = () => {
           showStatus={false}
           infiniteLoop
           autoPlay
-          interval={3000}
+          interval={6000}
         >
-          <div>
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <CarouselImage
               src="./douglasSiteImages/buildinghistorypageimages/manhartStore.jpg"
-              alt="Lodge Image 1"
+              alt="Original Lodge"
             />
+            <Typography variant="caption" sx={{
+                  maxWidth: "100%",
+                  textAlign: 'center',
+                  padding: '10px',
+                  backgroundColor: '#f0f0f0',
+                  color: '#333',
+                  marginTop: '5px',
+                  marginBottom: "30px",
+                }}>
+                  Original Lodge Sadalia, CO
+            </Typography>
           </div>
-          <div>
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <CarouselImage
               src="./douglasSiteImages/buildinghistorypageimages/josephCunninghamFirstWM_croped.jpg"
-              alt="Lodge Image 2"
+              alt="First Worshipful Master"
             />
+            <Typography variant="caption" sx={{
+                  maxWidth: "100%",
+                  textAlign: 'center',
+                  padding: '10px',
+                  backgroundColor: '#f0f0f0',
+                  color: '#333',
+                  marginTop: '5px',
+                  marginBottom: "30px",
+                }}>
+                  First Worshipful Master
+            </Typography>
           </div>
           <div>
             <CarouselImage
