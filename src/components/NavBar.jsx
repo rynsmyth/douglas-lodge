@@ -1,18 +1,18 @@
 import * as React from 'react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { AppBar, Toolbar, Typography, Button, IconButton, Drawer, List, ListItem, ListItemText, Collapse } from '@mui/material';
+import { AppBar, Toolbar, Typography, IconButton, Drawer, List, ListItem, ListItemText, Collapse } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import Logo from '../../public/douglasSiteImages/douglasLodgeSmallLogo.png';
 
 const NavBar = () => {
   const [isDrawerOpen, setDrawerOpen] = useState(false);
-  const [open, setOpen] = useState(false);
+  // const [open, setOpen] = useState(false);
 
-  const handleClick = (event) => {
-    event.stopPropagation();
-    setOpen(!open);
-  };
+  // const handleClick = (event) => {
+  //   event.stopPropagation();
+  //   setOpen(!open);
+  // };
 
   const toggleDrawer = (open) => (event) => {
     if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {

@@ -117,26 +117,43 @@ const About = () => {
         </Typography>
       </Item>
       <Box
+      sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        my: 4,
+      }}
+    >
+      {/* Image Container */}
+      <Box
         sx={{
-          height: { xs: "50vh", md: "75vh" },
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-          backgroundImage: "url(./2024Officers.jpg)",
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-          color: "white",
-          maxWidth: "100%",
-          maxHeight: "400px",
-          objectFit: "contain",
-          margin: "0 auto",
-          overflowX: "hidden",
-          my: 4,
+          height: {
+            xs: '40vh', // Height for small screens (phones)
+            sm: '50vh', // Height for tablets
+            md: '70vh', // Height for desktops
+          },
+          width: '100%',
+          maxHeight: '450px',
+          backgroundImage: 'url(./douglas_lodge_officers_2025.jpg)',
+          backgroundPosition: 'center',
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat',
           borderRadius: 1,
         }}
       />
+      
+      {/* Caption */}
+      <Typography
+        variant="subtitle1"
+        sx={{
+          color: 'gray',
+          mt: 2,
+          textAlign: 'center',
+        }}
+      >
+        *WB Jeffrey Noakes not pictured
+      </Typography>
+    </Box>
       <Item>
         <Typography variant="body2">
           “But who so looketh in the perfect law of liberty, and continueth therein, he not being a forgetful hearer, but a doer of the work, shall be blessed in his deed” James 1:25
@@ -145,19 +162,19 @@ const About = () => {
       <Masonry columns={{ xs: 1, sm: 2, md: 3 }} spacing={2}>
         <Item>
           <Typography variant="h4" sx={{ textAlign: "center", mb: 4 }}>
-            2024 Lodge Officers
+            2025 Lodge Officers
           </Typography>
-          <Typography variant="body1">Worshipful Master: Joel Charles</Typography>
-          <Typography variant="body1">Senior Warden: Thomas W. Adair</Typography>
-          <Typography variant="body1">Junior Warden: T.J. Ward</Typography>
+          <Typography variant="body1">Worshipful Master: Thomas W. Adair</Typography>
+          <Typography variant="body1">Senior Warden: T.J. Ward</Typography>
+          <Typography variant="body1">Junior Warden: Steve Stevens</Typography>
           <Typography variant="body1">Treasurer: Ricardo Dena</Typography>
           <Typography variant="body1">Secretary: Jeffery A. Noakes</Typography>
-          <Typography variant="body1">Senior Deacon: Donald A. Davis</Typography>
-          <Typography variant="body1">Junior Deacon: Christian Delarosa</Typography>
-          <Typography variant="body1">Senior Steward: Richard A. Wright</Typography>
-          <Typography variant="body1">Junior Steward: Frank J. Andrews</Typography>
+          <Typography variant="body1">Senior Deacon: Christian Delarosa</Typography>
+          <Typography variant="body1">Junior Deacon: Richard A. Wright</Typography>
+          <Typography variant="body1">Senior Steward: Justin Nelson</Typography>
+          <Typography variant="body1">Junior Steward: Scott Harbaugh</Typography>
           <Typography variant="body1">Chaplain: Lee Alexander</Typography>
-          <Typography variant="body1">Marshal: C. David Tuck</Typography>
+          <Typography variant="body1">Marshal: Paul Perseo</Typography>
           <Typography variant="body1">Tiler: Richard L. Anderton</Typography>
         </Item>
         <Box>

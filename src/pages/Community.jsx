@@ -84,42 +84,6 @@ const Community = () => {
                 Come See Us!
               </Typography>
               <List>
-              <ListItem>
-                  <ListItemText
-                    primary={<div><span color="inherit">Stated Meeting/Fellowship</span><br></br><a
-                      href="https://www.google.com/maps/search/?api=1&query=300+Wilcox+Street,+Castle+Rock,+CO+80104"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <span color="inherit">Douglas Lodge #153</span>
-                    </a></div>}
-                    secondary='Thursday January 2nd 7:30pm Stated Meeting/6:30pm Fellowship'    
-                  />
-                </ListItem>
-                <ListItem>
-                  <ListItemText
-                    primary={<div><span color="inherit">Hiram’s Coffee Club (non-members interested in masonry are welcome)</span><br></br><a
-                      href="https://www.google.com/maps/search/?api=1&query=300+Wilcox+Street,+Castle+Rock,+CO+80104"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <span color="inherit">Douglas Lodge #153</span>
-                    </a></div>}
-                    secondary='Sunday January 5th 8am to 10am' 
-                  />
-                </ListItem>
-                <ListItem>
-                  <ListItemText
-                    primary={<div><span color="inherit">Stated Meeting (no dinner)</span><br></br><a
-                      href="https://www.google.com/maps/search/?api=1&query=300+Wilcox+Street,+Castle+Rock,+CO+80104"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <span color="inherit">Douglas Lodge #153</span>
-                    </a></div>}
-                    secondary='Thursday January 16th 7:30pm'
-                  />
-                </ListItem>
                 <ListItem>
                   <ListItemText
                     primary={<div><span color="inherit">Stated Meeting/Fellowship</span><br></br><a
