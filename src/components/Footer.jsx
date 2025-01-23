@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Box, Container, Typography, IconButton, Button } from '@mui/material';
 import { Facebook as FacebookIcon, Instagram as InstagramIcon } from '@mui/icons-material';
 import { ContactModal } from "./ContactModal";
@@ -38,7 +38,7 @@ export const Footer = () => {
           </IconButton>
         </Box>
         <Button variant="contained" onClick={handleContactModalOpen}>
-              Learn More
+              Ask One...
             </Button>
             <br/>
             <br/>

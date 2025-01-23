@@ -1,16 +1,16 @@
-import React, { useState } from "react";
+import PropTypes from 'prop-types';
+import { useState } from "react";
 import {
-  Box,
-  Typography,
-  Button,
-  Modal,
-  TextField,
-  Card,
-  CardContent,
-  Checkbox,
-  FormControlLabel
+Box,
+Typography,
+Button,
+Modal,
+TextField,
+Card,
+CardContent,
+Checkbox,
+FormControlLabel
 } from "@mui/material";
-import emailjs from "emailjs-com";
 
 export const ContactModal = ({ open, handleClose }) => {
   const [formData, setFormData] = useState({
@@ -53,20 +53,34 @@ export const ContactModal = ({ open, handleClose }) => {
   };
 
   const modalStyle = {
-    position: "absolute",
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
-    bgcolor: "background.paper",
-    boxShadow: 24,
-    p: 4,
-    borderRadius: 2,
-    width: 600, // Increase the width to fit the PDF preview
-  };
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  bgcolor: "background.paper",
+  boxShadow: 24,
+  p: 4,
+  borderRadius: 2,
+  width: 600, // Increase the width to fit the PDF preview
+  maxHeight: "80vh", // Restrict height to 80% of the viewport
+  overflowY: "auto", // Enable vertical scrolling if content exceeds maxHeight
+};
+
 
   return (
     <Modal open={open} onClose={handleClose}>
       <Box sx={{ ...modalStyle, width: 400 }}>
+        <Card sx={{ minWidth: 200 }}>
+            <CardContent>
+              <Typography variant="h5" component="div">
+                Hello friend,
+              </Typography>
+              <Typography variant="body1">
+                We are glad you visited. Freemasonry is the oldest and largest men’s fraternity in the world. We have one simple mission; to make Good men Better. If you are at least 18 years old, have a belief in God, live locally, and can pass a criminal background check then we would love an opportunity to speak further with you.
+              </Typography>
+            </CardContent>
+          </Card>
+          <br/>
       <Card sx={{ minWidth: 200 }}>
             <CardContent>
               <Typography variant="h5" component="div">
@@ -141,4 +155,9 @@ export const ContactModal = ({ open, handleClose }) => {
       </Box>
     </Modal>
   );
+};
+
+ContactModal.propTypes = {
+open: PropTypes.bool.isRequired,
+handleClose: PropTypes.func.isRequired
 };

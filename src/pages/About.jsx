@@ -1,22 +1,20 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { styled } from "@mui/material/styles";
 import {
-  Box,
-  Paper,
-  Typography,
-  Button,
-  Modal,
-  Card,
-  CardContent,
+Box,
+Paper,
+Typography,
+Button,
+Modal,
+Card,
+CardContent,
 } from "@mui/material";
 import Masonry from "@mui/lab/Masonry";
-import emailjs from "emailjs-com";
-import { saveAs } from "file-saver";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // Requires CSS file
 import { Carousel } from "react-responsive-carousel";
 import "../App.css";
-import { InstagramEmbed } from 'react-social-media-embed';
 import { ContactModal } from "../components/ContactModal";
+import { ParkingModal } from "../components/ParkingModal";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor:
@@ -43,17 +41,57 @@ const CarouselImage = styled("img")({
 const ProspectInfoModal = ({ open, handleClose }) => {
   return (
     <Modal open={open} onClose={handleClose}>
-      <Box sx={{ ...modalStyle, width: { xs: '90%', sm: '80%', md: 800 } }}>
-        <Box sx={{ height: '90vh', overflow: 'auto' }}>
-          <Typography variant="h6" component="h2" gutterBottom>
+      <Box
+        sx={{
+          position: 'absolute',
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
+          bgcolor: 'background.paper',
+          boxShadow: 24,
+          borderRadius: 2,
+          width: { xs: '95%', sm: '95%', md: '95%' },
+          height: { xs: '85vh', sm: '85vh', md: '90vh' },
+          overflow: 'hidden',
+        }}
+      >
+        <Box
+          sx={{
+            height: '100%',
+            display: 'flex',
+            flexDirection: 'column',
+          }}
+        >
+          <Typography
+            variant="h6"
+            component="h2"
+            sx={{
+              textAlign: 'center',
+              mb: 2,
+            }}
+          >
             Prospect Information
           </Typography>
-          <iframe
-            src="./2024 Douglas Lodge Introduction Pamphlet-min (2).pdf"
-            width="100%"
-            height="100%"
-            title="Prospect Information"
-          />
+          <Box
+            sx={{
+              flexGrow: 1,
+              overflow: 'auto',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+          >
+            <iframe
+              src="./2025 Douglas Lodge Introduction Pamphlet.pdf"
+              style={{
+                width: '100%',
+                height: '100%',
+                minHeight: '500px', // Ensures visibility on small screens
+                border: 'none',
+              }}
+              title="Prospect Information"
+            />
+          </Box>
         </Box>
       </Box>
     </Modal>
@@ -75,6 +113,7 @@ const modalStyle = {
 const About = () => {
   const [contactModalOpen, setContactModalOpen] = useState(false);
   const [prospectModalOpen, setProspectModalOpen] = useState(false);
+  const [parkingModalOpen, setParkingModalOpen] = useState(false);
 
   const handleContactModalOpen = () => {
     setContactModalOpen(true);
@@ -92,10 +131,18 @@ const About = () => {
     setProspectModalOpen(false);
   };
 
+    const handleParkingModalOpen = () => {
+    setParkingModalOpen(true);
+  };
+
+  const handleParkingModalClose = () => {
+    setParkingModalOpen(false);
+  };
+
   return (
     <Box sx={{ flexGrow: 1, overflowX: "hidden", p: 2 }}>
       <Typography variant="h3" sx={{ textAlign: "center", mb: 4 }}>
-        About our Lodge
+        About Our Lodge
       </Typography>
       <Item>
         <Typography variant="body1">
@@ -124,7 +171,6 @@ const About = () => {
         my: 4,
       }}
     >
-      {/* Image Container */}
       <Box
         sx={{
           height: {
@@ -141,9 +187,7 @@ const About = () => {
           borderRadius: 1,
         }}
       />
-      
-      {/* Caption */}
-      <Typography
+            <Typography
         variant="subtitle1"
         sx={{
           color: 'gray',
@@ -222,12 +266,20 @@ const About = () => {
                   Castle Rock, CO 80104
                 </Typography>
               </a>
+              <br />
+              <Button variant="contained" onClick={handleParkingModalOpen}>
+              Parking
+            </Button>
             </CardContent>
           </Card>
           <br />
           <Item>
+            <Typography variant="h5" component="div">
+                To Be One,
+              </Typography>
+              <br />
             <Button variant="contained" onClick={handleContactModalOpen}>
-              Learn More
+              Ask One...
             </Button>
             <br />
             <br />
@@ -239,6 +291,7 @@ const About = () => {
       </Masonry>
       <ContactModal open={contactModalOpen} handleClose={handleContactModalClose} />
       <ProspectInfoModal open={prospectModalOpen} handleClose={handleProspectModalClose} />
+      <ParkingModal open={parkingModalOpen} handleClose={handleParkingModalClose} />
       <Box sx={{ mt: 4 }}>
         <Carousel
           showThumbs={false}
