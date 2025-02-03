@@ -190,7 +190,7 @@ const About = () => {
             <Typography
         variant="subtitle1"
         sx={{
-          color: 'gray',
+          color: 'black',
           mt: 2,
           textAlign: 'center',
         }}
