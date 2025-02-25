@@ -1,6 +1,6 @@
 import React from "react";
 import { styled } from "@mui/material/styles";
-import { Typography, List, ListItem, ListItemText, Link, Grid, Paper, Box } from "@mui/material";
+import { Typography, List, ListItem, ListItemText, Link, Grid, Paper, Box, ListItemAvatar, Avatar } from "@mui/material";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 
@@ -86,18 +86,6 @@ const Community = () => {
               <List>
                 <ListItem>
                   <ListItemText
-                    primary={<div><span color="inherit">Stated Meeting/Fellowship</span><br></br><a
-                      href="https://www.google.com/maps/search/?api=1&query=300+Wilcox+Street,+Castle+Rock,+CO+80104"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <span color="inherit">Douglas Lodge #153</span>
-                    </a></div>}
-                    secondary='Thursday February 6th 7:30pm Stated Meeting/6:30pm Fellowship'
-                  />
-                </ListItem>
-                <ListItem>
-                  <ListItemText
                     primary={<div><span color="inherit">Stated Meeting</span><br></br><a
                       href="https://www.google.com/maps/search/?api=1&query=300+Wilcox+Street,+Castle+Rock,+CO+80104"
                       target="_blank"
@@ -130,6 +118,32 @@ const Community = () => {
                       <span color="inherit">Douglas Lodge #153</span>
                     </a></div>}
                     secondary='Thursday March 19th 7:30pm Stated Meeting/6:30pm dinner'
+                  />
+                </ListItem>
+                <ListItem
+                  secondaryAction={
+                    <img
+                      src="./douglasSiteImages/April 2025 Blood Drive.jpg"
+                      alt="American Red Cross"
+                      style={{ width: 170, height: 120 }}
+                    />
+                  }
+                >
+                  <ListItemText
+                    primary={
+                      <div>
+                        <span style={{ color: "inherit" }}>American Red Cross Blood Drive</span>
+                        <br />
+                        <a
+                          href="https://www.google.com/maps/search/?api=1&query=300+Wilcox+Street,+Castle+Rock,+CO+80104"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <span style={{ color: "inherit" }}>Douglas Lodge #153</span>
+                        </a>
+                      </div>
+                    }
+                    secondary="Monday April 28th 10:00am to 3:00pm"
                   />
                 </ListItem>
               </List>
